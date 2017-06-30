@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<title>IARE PORTAL</title>
+		<meta charset="utf-8">
+		<link href="css/style1.css" rel='stylesheet' type='text/css' />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+		<!--webfonts-->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css'>
+       <script async src="Jquery.js"></script>
+		<!--//webfonts-->
+</head>
+<body onLoad="hai()">
+<script>
+window.location.hash="no-back-button";
+window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
+window.onhashchange=function(){window.location.hash="no-back-button";}
+</script>
+  <div id="wrapper">
+      <nav>
+        <ul class="menu">
+         
+        </ul>
+      </nav>
+    </div>
+				 <!-----start-main---->
+				<div class="login-form">
+						
+				<form>
+                
+                <input type="radio"  id="faculty" name="user" value="faculty"><label style="color:#FFF"> Faculty</label></input>
+				<input type="radio"  id="admin" name="user" value="admin"><label style="color:#FFF">Administrator</label></input>
+                <input type="radio"  id="student" name="user" value="student"><label style="color:#FFF">Student</label></input>
+                	<br><br><br><br><li>
+						<input type="text" class="text" id="username" placeholder="username"/>
+					</li>
+					<li>
+						<input type="password" id="password" placeholder="password"/>
+					</li>
+					
+					 <div class ="forgot">
+						<h3><input type="button"  value="Forgot Password?" onclick="checkusername()">Forgot Password?</input></h3>
+						<input type="button" onclick="checkUser();" value="Sign In" />                                                                                                                                                                                                                                 </h4>
+					</div>
+				</form>
+			</div>
+				
+
+		 
+</body>
+</html>

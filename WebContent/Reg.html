@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Registration</title>
+<style type="text/css">
+body{
+	height:768px;
+	width:1366px;
+background-image:url(Background.png);
+background-repeat:no-repeat;
+color: black;
+font-family: Papyrus;
+font-size: 20px;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body >
+<body background=onload=" getStates(); getBranch(); getSection();" >
+<form action="Register" method="post">
+<div id="insideBody" align="center">
+<table cellpadding="8px" cellspacing=""  align="center">
+<tr><td>Hall ticket No</td><td><input type="text" name="hallno" id="hallno" required/></td></tr>
+<tr><td>Password</td><td> <input type="password" name="password" id="password" required/></td></tr>
+<tr><td>Name </td><td><input type="text" name="name" id="name" required/></td></tr>
+<tr><td>DOB </td><td><input type="date" name="dob" id="dob" required/></td></tr>
+<tr><td>Contact </td><td><input type="number" name="contact" id="contact"  required/></td></tr>
+<tr><td>FatherName </td><td><input type="text" name="fathername" id="fathername" required/></td></tr>
+<tr><td>FatherOccupation</td><td> <input type="text" name="fatheroccu" id="fatheroccu" required/></td></tr>
+<tr><td>MotherName </td><td><input type="text" name="mothername" id="hallno" required/></td></tr>
+<tr><td>MotherOccupation </td><td><input type="text" name="motheroccu" id="motheroccu" required/></td></tr>
+<tr><td>ParentsContact </td><td><input type="number" name="parcont" id="parcont" required/></td></tr>
+<tr><td>Email </td><td><input type="email" name="email" id="email" required/></td></tr>
+<tr><td>Gender</td><td> <input type="radio" name="gender" id="male" value="male" required>Male</input>
+<input type="radio" name="gender" id="female" value="female" required>Female</input></td></tr>
+<tr><td>Branch</td><td><select id="branch" name="branch" onchange="getyear();" required></select></td></tr>
+<tr><td>Year</td><td><select id="year" name="year" onchange="getSemester()" required></select></td></tr>
+<tr><td>Semester</td><td><select id="semester" name="semester" required></select></td></tr>
+<tr><td>House Number</td><td><input type="text" name="houseNumber" id="houseNo" required/></td></tr>
+<tr><td>Colony</td><td><input type="text" name="colony" id="colony" required/></td></tr>
+<tr><td>Address</td><td><input type="text" name="address" id="address" required/></td></tr>
+<tr><td>State</td><td><select id="state" name="state" onchange="getCities()" required></select></td></tr>
+<tr><td>City</td><td><select id="city" name="city"></select></td></tr>
+
+
+<tr><td>Section</td><td><select id="section" name="section" required></select></td></tr>
+
+
+
+</table>
+<input type="submit" value="Register">
+<input type="reset" value="reset">
+</div>
+</form>
+</body>
+</html>

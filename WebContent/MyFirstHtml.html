@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function getData(){
+	var xml=new XMLHttpRequest();
+	var url="MyFirstServlet";
+	xml.open("POST",url , true);
+	xml.send();
+	xml.onreadystatechange=function(){
+		//alert(xml.readyState);
+		if(xml.readyState==4&&xml.status==200){
+			var response=xml.responseXML;
+			var data=response.getElementsByTagName("xmldata");
+			var text=document.getElementById("ScriptSideIdentification");
+			
+			
+			
+			text.value=data[0].childNodes[0].nodeValue;
+			
+		}	
+		
+	}
+	
+
+}
+</script>
+</head>
+<body>
+<input type="text" name="serverSideIdentification" id="ScriptSideIdentification" >
+<input type="button" value="Submit" onclick="getData()">
+
+
+</body>
+</html>
